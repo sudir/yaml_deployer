@@ -16,7 +16,7 @@ node {
        sh "cat /etc/*-release"
     }
 
-    stage('Publish build info') {
-        server.publishBuildInfo buildInfo
+    stage('Clean Workspace') {
+        cleanWs()
     }
 }
