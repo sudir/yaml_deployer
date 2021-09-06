@@ -3,7 +3,7 @@ node {
 
 
     stage('Clone sources') {
-        git url: 'https://github.com/sudir/yaml_deployer.git'
+       git branch: 'main', credentialsId: 'admin_git_creds', url: 'https://github.com/sudir/yaml_deployer.git'
     }
 
     stage('Artifactory configuration') {
