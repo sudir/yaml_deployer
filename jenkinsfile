@@ -8,12 +8,12 @@ node {
 
     stage('Artifactory configuration') {
 
-       whoami
+      sh "whoami"
      
     }
 
     stage('OS Check') {
-       whoami
+       sh "cat /etc/*-release"
     }
 
     stage('Publish build info') {
