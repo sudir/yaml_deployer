@@ -10,7 +10,7 @@ node {
 
         withAWS(credentials: 'aws-admin-credentials', region: 'us-east-1') {
             // Do some aws action to test API plugin
-            aws get sts-caller-identity
+            aws sts get-caller-identity
     }
      
     }
