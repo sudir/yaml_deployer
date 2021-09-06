@@ -8,10 +8,7 @@ node {
 
     stage('Artifactory configuration') {
 
-        withAWS(credentials: 'aws-admin-credentials', region: 'us-east-1') {
-            // Do some aws action to test API plugin
-           awsIdentity
-    }
+       whoami
      
     }
 
