@@ -1,22 +1,12 @@
-node {
-
-
-
-    stage('Clone sources') {
-       git branch: 'main', credentialsId: 'admin_git_creds', url: 'https://github.com/sudir/yaml_deployer.git'
+pipeline {
+    agent {
+        docker { image 'node:14-alpine' }
     }
-
-    stage('Artifactory configuration') {
-
-      sh "whoami"
-     
-    }
-
-    stage('OS Check') {
-       sh "cat /etc/*-release"
-    }
-
-    stage('Clean Workspace') {
-        cleanWs()
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
 }
