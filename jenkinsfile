@@ -1,12 +1,22 @@
-pipeline {
-    agent {
-        kubernetes { image 'node:14-alpine' }
+node {
+
+
+
+    stage('Clone sources') {
+       git branch: 'main', credentialsId: 'admin_git_creds', url: 'https://github.com/sudir/yaml_deployer.git'
     }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
+
+    stage('Artifactory configuration') {
+
+      sh "node --version"
+     
+    }
+
+    stage('OS Check') {
+       sh "cat /etc/*-release"
+    }
+
+    stage('Clean Workspace') {
+        cleanWs()
     }
 }
