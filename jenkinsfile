@@ -1,5 +1,7 @@
 node {
-
+   options {
+    buildDiscarder(logRotator(numToKeepStr: '4', artifactNumToKeepStr: '4'))
+  }
 
 
     stage('Clone sources') {
