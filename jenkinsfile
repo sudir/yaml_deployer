@@ -1,8 +1,5 @@
 node {
-   options {
-    buildDiscarder(logRotator(numToKeepStr: '4', artifactNumToKeepStr: '4'))
-  }
-
+ 
 
  agent {
   label "aws-build-container"
