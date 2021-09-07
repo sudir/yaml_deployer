@@ -4,6 +4,9 @@ node {
   }
 
 
+ agent {
+  label "aws-build-container"
+
     stage('Clone sources') {
        git branch: 'main', credentialsId: 'admin_git_creds', url: 'https://github.com/sudir/yaml_deployer.git'
     }
@@ -21,4 +24,6 @@ node {
     stage('Clean Workspace') {
         cleanWs()
     }
+    
+  }
 }
