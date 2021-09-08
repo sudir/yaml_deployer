@@ -8,8 +8,10 @@ node {
     }
 
     stage('Artifactory configuration') {
-
-      sh "aws --version"
+      
+      
+      sh "sleep 999999999"
+     
      
     }
 
