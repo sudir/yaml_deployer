@@ -9,7 +9,7 @@ node {
 
     stage('Artifactory configuration') {
 
-      sh "node --version"
+      sh "cat /etc/*-release"
      
     }
 
