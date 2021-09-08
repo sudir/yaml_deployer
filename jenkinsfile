@@ -1,4 +1,4 @@
-node("aws-build-container") {
+node {
  
 
 
