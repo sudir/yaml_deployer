@@ -9,12 +9,12 @@ node {
 
     stage('Artifactory configuration') {
 
-      sh "cat /etc/*-release"
+      sh "aws --version"
      
     }
 
     stage('OS Check') {
-       sh "cat /etc/*-release"
+       sh "kubectl --version"
     }
 
     stage('Clean Workspace') {
