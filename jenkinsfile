@@ -10,9 +10,9 @@ node {
     stage('Artifactory configuration') {
       
       
-      sh "sleep 999999999"
+      sh "cat /etc/*-release"
      
-     
+ 
     }
 
     stage('OS Check') {
